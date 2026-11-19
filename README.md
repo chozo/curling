@@ -86,6 +86,9 @@ npm run e2e      # ビルド後に実行（--url で公開先も確認できる�
 
 Cloudflare Workers（Static Assets）で `https://game.chozo.net/curling/` に公開しています。設定は `wrangler.jsonc`（Worker 名 `curling`、ルート `game.chozo.net/curling` と `game.chozo.net/curling/*`、workers.dev は使わない）。`npm run build` で `dist/curling/` に出力し、`npm run deploy` で公開します。
 
+- 公開先の確認（2026-11-19）: `npm run e2e -- --url https://game.chozo.net/curling/` で、スマホ（360×640）と PC の操作・試合の進行がすべて合格。favicon・OGP 画像の取得と、同じドメインの他のゲームが表示されることも確認。
+- スマホ実機での手触り・音は未確認。
+
 ## 次の段階
 
 1. 実機で手触りと CPU の強さを調整する（必要なら難易度の選択を付ける）
