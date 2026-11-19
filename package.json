@@ -1,0 +1,30 @@
+{
+  "name": "curling",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "e2e": "node tools/e2e.mjs",
+    "ogp": "npm run build && node tools/ogp/make-ogp.mjs",
+    "promo": "npm run build && node tools/promo/make-bgm.mjs && node tools/promo/record.mjs",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/three": "^0.187.0",
+    "ffmpeg-static": "^5.3.0",
+    "playwright-core": "^1.65.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0",
+    "wrangler": "^4.165.0"
+  }
+}
